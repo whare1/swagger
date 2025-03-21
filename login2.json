@@ -1,8 +1,8 @@
 {
-    "url": "https://raw.githubusercontent.com/Rivek619/R-Payloads-101/refs/heads/main/SwaggerUI/rlogin1.yaml",
+    "url": "https://raw.githubusercontent.com/coffinxp/swagger/refs/heads/main/login2.yaml",
     "urls": [
         {
-            "url": "https://raw.githubusercontent.com/Rivek619/R-Payloads-101/refs/heads/main/SwaggerUI/rlogin1.yaml",
+            "url": "https://raw.githubusercontent.com/coffinxp/swagger/refs/heads/main/login2.yaml",
             "name": "Coffinxp"
         }
     ]
