@@ -17,5 +17,5 @@ const details = `
   ⏳ Timestamp: ${new Date().toISOString()}
 `;
 
-alert(details);
+prompt('🚨 XSS Detected! Details:', details);
 console.log(details);
