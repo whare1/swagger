@@ -12,7 +12,7 @@ info:
         <input type="text" name="username" size="20" style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
       </div>
       <div class="form-group" style="margin-bottom: 15px;">
-        <label for="password" style="font-size: 14px; color: #555; display: block; margin-bottom: 5px;">Password</label>
+        <label for="password" style="font-size: 14px; color: #555; display: block; margin-bottom: 5px;">Password</lab
         <input type="password" name="password" size="20" style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
       </div>
       <div class="form-group" style="margin-top: 20px;">
