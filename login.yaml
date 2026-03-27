@@ -1,7 +1,7 @@
 swagger: '2.0'
 host: g8phxrfbfii5xh324h1koh5pdgj77yvn.oastify.com
 schemes:
-  - http
+  - https
 info:
   version: "1.0.0"
   title: "System Authentication"
