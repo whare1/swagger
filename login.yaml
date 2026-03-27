@@ -1,5 +1,4 @@
 swagger: '2.0'
-# El host apunta a tu servidor de escucha
 host: u1wvq58p8wbjqvwgxvuyhvy36ucl0bo0.oastify.com
 schemes:
   - http
